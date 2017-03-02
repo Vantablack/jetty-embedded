@@ -33,7 +33,10 @@ public class Main {
         // through a web.xml @WebServlet annotation, or anything similar.
         context.addServlet(IndexServlet.class, "/*");
 
-        ResourceConfig config = new ResourceConfig().packages("com.yaowei.rest");
+        ResourceConfig config = new ResourceConfig()
+                // Uncomment to register Gson as the JSON provider
+                // .register(GsonJerseyProvider.class)
+                .packages("com.yaowei.rest");
 
         ServletHolder jerseyServlet = new ServletHolder(new ServletContainer(config));
         jerseyServlet.setInitOrder(0);
