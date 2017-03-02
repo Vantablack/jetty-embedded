@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="embeddedjetty" />
+        <module name="jetty-embedded" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="embeddedjetty" target="1.8" />
+      <module name="jetty-embedded" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
