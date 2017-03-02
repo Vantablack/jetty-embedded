@@ -11,8 +11,8 @@ import javax.ws.rs.core.MediaType;
 @Path("/")
 public class IndexAPI {
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String test() {
-        return "Hello from IndexAPI.class";
+    @Produces(MediaType.TEXT_HTML)
+    public String index() {
+        return "<h1>Hello from IndexAPI</h1>";
     }
 }
